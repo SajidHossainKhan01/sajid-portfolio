@@ -268,6 +268,19 @@
             position: relative;
         }
 
+        /* --- GOLD/CHAMPION CARD STYLING --- */
+        /* Light Mode: Cream background + Gold Border */
+        .cert-card.gold-highlight {
+            border-top: 4px solid #f59e0b;
+            background-color: #fffbf2;
+        }
+
+        /* Dark Mode: Turn background Dark + Keep Gold Border */
+        [data-theme="dark"] .cert-card.gold-highlight {
+            background-color: var(--card-bg); /* Changes to dark grey/black */
+            border-top: 4px solid #f59e0b;
+        }
+
         .cert-card:hover {
             border-color: var(--primary);
             transform: translateY(-3px);
@@ -539,7 +552,7 @@
         
         <div class="cert-grid">
             
-            <div class="cert-card" style="border-top: 4px solid #f59e0b; background: #fffbf2;">
+            <div class="cert-card gold-highlight">
                 <div class="cert-body">
                     <i class="fas fa-trophy cert-badge" style="color: #f59e0b;"></i>
                     <h3 class="cert-title">ICPC Asia Dhaka Regional 2023</h3>
@@ -551,7 +564,7 @@
                 </div>
             </div>
 
-            <div class="cert-card" style="border-top: 4px solid #f59e0b; background: #fffbf2;">
+           <div class="cert-card gold-highlight">
                 <div class="cert-body">
                     <i class="fas fa-crown cert-badge" style="color: #f59e0b;"></i>
                     <h3 class="cert-title"> Champion – Intra University Programming Contest (NDUB CSE Fest 2023)</h3>
@@ -567,7 +580,7 @@
                 </div>
             </div>
 
-            <div class="cert-card" style="border-top: 4px solid #f59e0b; background: #fffbf2;">
+            <div class="cert-card gold-highlight">
                 <div class="cert-body">
                     <i class="fas fa-crown cert-badge" style="color: #f59e0b;"></i>
                     <h3 class="cert-title">Champion - Project Show 2024</h3>
@@ -1203,6 +1216,7 @@
     </script>
 </body>
 </html>
+
 
 
 
