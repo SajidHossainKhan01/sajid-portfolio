@@ -8,18 +8,59 @@
     <style>
         /* --- GLOBAL VARIABLES & RESET --- */
         :root {
-            --primary: #2563eb;       /* Modern Blue */
-            --secondary: #1e40af;     /* Darker Blue */
-            --accent: #f59e0b;        /* Gold for Certs */
-            --dark: #0f172a;          /* Slate Dark */
-            --light: #f8fafc;         /* Off-white bg */
-            --text-main: #334155;     /* Slate Gray */
-            --text-light: #94a3b8;    /* Lighter Gray */
-            --white: #ffffff;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --transition: all 0.3s ease;
-        }
+    /* Light Mode (Default) */
+    --primary: #2563eb;       /* Your Blue */
+    --bg-color: #ffffff;      /* White Background */
+    --text-color: #1e293b;    /* Dark Text */
+    --card-bg: #f8fafc;       /* Light Grey Card */
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --border-color: #e2e8f0;
+}
 
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --primary: #60a5fa;       /* Lighter Blue for Dark Mode */
+    --bg-color: #0f172a;      /* Deep Dark Blue/Black */
+    --text-color: #f1f5f9;    /* Light Text */
+    --card-bg: #1e293b;       /* Darker Card */
+    --nav-bg: rgba(15, 23, 42, 0.95);
+    --border-color: #334155;
+}
+
+/* Apply variables to main elements */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Update cards to use variables */
+.project-card, .timeline-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+/* Navbar Style */
+nav {
+    background: var(--nav-bg);
+}
+
+/* Toggle Button Style */
+.theme-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: rotate(15deg) scale(1.1);
+    color: var(--primary);
+}
         * {
             margin: 0;
             padding: 0;
@@ -1112,6 +1153,7 @@
 
 </body>
 </html>
+
 
 
 
