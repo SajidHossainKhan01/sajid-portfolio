@@ -267,23 +267,21 @@
             transition: var(--transition);
             position: relative;
         }
-
-        /* --- GOLD/CHAMPION CARD STYLING --- */
-        /* Light Mode: Cream background + Gold Border */
-        .cert-card.gold-highlight {
-            border-top: 4px solid #f59e0b;
-            background-color: #fffbf2;
-        }
-
-        /* Dark Mode: Turn background Dark + Keep Gold Border */
-        [data-theme="dark"] .cert-card.gold-highlight {
-            background-color: var(--card-bg); /* Changes to dark grey/black */
-            border-top: 4px solid #f59e0b;
-        }
-
+        
         .cert-card:hover {
             border-color: var(--primary);
             transform: translateY(-3px);
+        }
+
+        .cert-card.gold-highlight {
+            border-top: 4px solid #f59e0b;
+            background-color: #fffbf2; /* Cream for Light Mode */
+        }
+
+        /* Switch Gold Cards to Dark in Dark Mode */
+        [data-theme="dark"] .cert-card.gold-highlight {
+            background-color: var(--card-bg); /* Dark Grey/Black */
+            border-top: 4px solid #f59e0b;
         }
 
         .cert-body { padding: 1.5rem; }
@@ -1216,6 +1214,7 @@
     </script>
 </body>
 </html>
+
 
 
 
