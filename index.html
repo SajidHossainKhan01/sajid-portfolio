@@ -1135,54 +1135,54 @@ nav {
     </section>
 
     <footer class="contact-section" id="contact">
-    <div class="contact-content">
-        <h2>Let's Work Together</h2>
-        <p>I am currently available for freelance work or full-time opportunities.</p>
-        
-        <a href="mailto:sk6819152@gmail.com" class="btn" style="background: white; color: var(--primary);">Say Hello</a>
-        
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/sajid-hossain-khan-7275272a4/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/SajidHossainKhan01" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="contact-content">
+            <h2>Let's Work Together</h2>
+            <p>I am currently available for freelance work or full-time opportunities.</p>
             
-            <a href="mailto:sk6819152@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:sk6819152@gmail.com" class="btn" style="background: white; color: #2563eb;">Say Hello</a>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sajid-hossain-khan-7275272a4/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/SajidHossainKhan01" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:sk6819152@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p style="margin-top: 3rem; font-size: 0.8rem; color: #64748b;">&copy; 2025 Sajid Hossain Khan. All Rights Reserved.</p>
         </div>
-        <p style="margin-top: 3rem; font-size: 0.8rem; color: #64748b;">&copy; 2025 Sajid Hossain Khan. All Rights Reserved.</p>
-    </div>
-</footer>
-<script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const icon = themeToggle.querySelector('i');
+    </footer>
 
-    // 1. Check if user already visited and selected a mode
-    const currentTheme = localStorage.getItem('theme');
-    
-    if (currentTheme === 'dark') {
-        body.setAttribute('data-theme', 'dark');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    }
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
 
-    // 2. Function to switch modes
-    themeToggle.addEventListener('click', () => {
-        const isDark = body.getAttribute('data-theme') === 'dark';
-
-        if (isDark) {
-            // Switch to Light
-            body.removeAttribute('data-theme');
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-            localStorage.setItem('theme', 'light');
-        } else {
-            // Switch to Dark
+        // 1. Check if user already visited and selected a mode
+        const currentTheme = localStorage.getItem('theme');
+        
+        if (currentTheme === 'dark') {
             body.setAttribute('data-theme', 'dark');
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
-            localStorage.setItem('theme', 'dark');
         }
-    });
-</script>
+
+        // 2. Function to switch modes
+        themeToggle.addEventListener('click', () => {
+            const isDark = body.getAttribute('data-theme') === 'dark';
+
+            if (isDark) {
+                // Switch to Light
+                body.removeAttribute('data-theme');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            } else {
+                // Switch to Dark
+                body.setAttribute('data-theme', 'dark');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
 </body>
 </html>
 
