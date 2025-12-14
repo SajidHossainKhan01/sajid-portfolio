@@ -162,11 +162,12 @@
 
         /* --- HERO SECTION --- */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            /* Subtle gradient that adapts to theme */
+            background: linear-gradient(135deg, var(--bg-color) 0%, var(--card-bg) 100%);
             padding: 0 2rem;
             text-align: center;
             padding-top: 60px;
@@ -175,31 +176,31 @@
         .hero-content h1 {
             font-size: 3.5rem;
             font-weight: 800;
-            color: var(--dark);
+            color: var(--text-color);
             margin-bottom: 1rem;
             line-height: 1.2;
         }
 
-        .hero-content h1 span { color: var(--primary); }
-
         .hero-content p {
             font-size: 1.25rem;
-            color: var(--text-main);
+            color: var(--text-light);
             margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
+        /* Buttons */
         .btn {
             display: inline-block;
             padding: 1rem 2rem;
             background: var(--primary);
-            color: var(--white);
+            color: #ffffff; /* Always white text on primary button */
             border-radius: 50px;
             font-weight: 600;
             transition: var(--transition);
             box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            border: none;
         }
 
         .btn:hover {
@@ -217,7 +218,7 @@
 
         .btn-outline:hover {
             background: var(--primary);
-            color: var(--white);
+            color: #ffffff;
         }
 
         /* --- SECTIONS COMMON --- */
@@ -234,18 +235,17 @@
 
         .section-title h2 {
             font-size: 2.5rem;
-            color: var(--dark);
+            color: var(--text-color);
             margin-bottom: 1rem;
         }
 
-        .section-title .bar {
+        .bar {
             height: 4px;
             width: 60px;
             background: var(--primary);
             margin: 0 auto;
             border-radius: 2px;
         }
-
         /* --- SKILLS --- */
         .skills-grid {
             display: grid;
@@ -1216,6 +1216,7 @@
     </script>
 </body>
 </html>
+
 
 
 
