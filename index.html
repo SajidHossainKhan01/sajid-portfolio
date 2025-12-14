@@ -102,7 +102,63 @@
             transition: var(--transition);
         }
 
+        .nav-links a:hover { color: var(--primary); }/* --- NAVIGATION --- */
+        nav {
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
         .nav-links a:hover { color: var(--primary); }
+
+        /* Dark Mode Toggle Button */
+        .theme-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-left: 1rem;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .theme-btn:hover {
+            transform: rotate(15deg) scale(1.1);
+            color: var(--primary);
+        }
 
         /* --- HERO SECTION --- */
         .hero {
@@ -1160,6 +1216,7 @@
     </script>
 </body>
 </html>
+
 
 
 
